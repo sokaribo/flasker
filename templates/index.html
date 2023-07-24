@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome Sokaribo</h1>
+    <h3>Welcome Matilda</h3>
+    <h5>I'm {{ last_name }}</h5>
+    <p>{{ stuff|title }}</p>
+    <h3>Favorite Pizza:</h3>
+    {% for topping in favorite_pizza %}
+        {% if topping == 41 %}
+            {{ topping + 100 }}
+        {% else %}
+            {{ topping }}<br/>
+        {% endif %}
+    {% endfor %}
+    <br/><br/>
+    {{ favorite_pizza.0 }}
+</body>
+</html>
